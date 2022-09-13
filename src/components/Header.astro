@@ -1,0 +1,60 @@
+---
+// WRITE JAVASCRIPT HERE
+
+
+
+---
+
+<!-- Component Template (HTML + JS Expressions) -->
+<div class="container m-8">
+  <div class="flex flex-row justify-between">
+    <div class="basis-1/2 flex flex-row items-center">
+      <p class="left-text mx-1">DESIGNER</p>
+      <div class="w-1 h-1 bg-slate-800 rounded-full mx-2"></div>
+      <p class="left-text mx-1">DEVELOPER</p>
+    </div>
+
+    <!-- RIGHT SIDE HEADER  -->
+    <div class="basis-1/2 flex flex-row items-center justify-center">
+      <a href="#" class="right-text mx-2" onclick="return handleClick">HOME</a>
+      <a href="#" class="right-text mx-2">ABOUT</a>
+      <a href="#" class="right-text mx-2">PROJECTS</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --link-gradient: linear-gradient(
+      45deg,
+      #4f39fa,
+      #da62c4 30%,
+      var(--color-border) 60%
+    );
+  }
+
+  /* Register our custom font family and tell the browser where to find it. */
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("/fonts/RobotoMono-Medium.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  .left-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: "Roboto Mono";
+  }
+
+  .right-text{
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: "Roboto Mono";
+  }
+</style>
+
+<script type="text/javascript">
+const handleClick = () =>{
+    console.log("Hello");
+}
+</script>

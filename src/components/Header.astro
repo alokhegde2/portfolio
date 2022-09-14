@@ -1,13 +1,10 @@
 ---
 // WRITE JAVASCRIPT HERE
-
-
-
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<div class="container m-8">
-  <div class="flex flex-row justify-between">
+<div class="mt-5 mx-12 main-container">
+  <div class="flex flex-row justify-start">
     <div class="basis-1/2 flex flex-row items-center">
       <p class="left-text mx-1">DESIGNER</p>
       <div class="w-1 h-1 bg-slate-800 rounded-full mx-2"></div>
@@ -15,8 +12,7 @@
     </div>
 
     <!-- RIGHT SIDE HEADER  -->
-    <div class="basis-1/2 flex flex-row items-center justify-center">
-      <a href="#" class="right-text mx-2" onclick="return handleClick">HOME</a>
+    <div class="basis-1/2 flex flex-row items-center justify-end">
       <a href="#" class="right-text mx-2">ABOUT</a>
       <a href="#" class="right-text mx-2">PROJECTS</a>
     </div>
@@ -40,21 +36,25 @@
     font-display: swap;
   }
 
+  .main-container {
+    max-width: 100vw;
+  }
+
   .left-text {
     font-size: 0.75rem;
     font-weight: 600;
     font-family: "Roboto Mono";
   }
 
-  .right-text{
+  .right-text {
     font-size: 0.75rem;
     font-weight: 600;
     font-family: "Roboto Mono";
   }
-</style>
 
-<script type="text/javascript">
-const handleClick = () =>{
-    console.log("Hello");
-}
-</script>
+  @font-face {
+    font-family: "Permanent Marker";
+    src: url("/fonts/PermanentMarker-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+</style>

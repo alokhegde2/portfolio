@@ -1,0 +1,88 @@
+---
+import HomeCard from "./HomeCard.astro";
+import avatar from "/images/avatar.png";
+import logos from "/images/logos.png";
+---
+
+<div
+  class="grid sm:grid-cols-1 md:grid-cols-3 gap-4 container main-container px-20"
+>
+  <div class="flex justify-center flex-col">
+    <h1 class="hello-text">Hello!</h1>
+    <p>I'm Alok and I'm a Software Engineer</p>
+  </div>
+  <div class="flex justify-center">
+    <img src={avatar} alt="avatar" srcset="" class="avatarImage" />
+  </div>
+  <div class="flex justify-center flex-col">
+    <HomeCard />
+  </div>
+</div>
+
+<style>
+  .main-container {
+    animation-name: bodyAnim;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: linear;
+    max-width: 100vw;
+  }
+
+  @keyframes bodyAnim {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  .avatarImage {
+    animation-name: avatarAnim;
+  }
+
+  .avatarImage:hover {
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes avatarAnim {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(20deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-20deg);
+    }
+    0% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .hello-text {
+    font-family: "Permanent Marker";
+    font-size: 2.5rem;
+    text-align: left;
+    color: #f0a500;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Roboto Mono";
+    text-align: left;
+    color: #5c5c5c;
+  }
+</style>

@@ -1,16 +1,29 @@
 ---
+import Body from "../components/Body.astro";
 import Header from "../components/Header.astro";
+import SecondaryHeader from "../components/SecondaryHeader.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Alok Hegde - Software Engineer">
   <main>
     <Header />
+    <SecondaryHeader />
+    <div class="body flex justify-center items-center">
+      <Body />
+    </div>
   </main>
 </Layout>
 
 <style>
   :root {
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
+
+  .body {
+    background-color: #f7f7f7;
+    min-height: 75vh ;
+    margin: 2rem;
+    padding: 2rem;
   }
 </style>

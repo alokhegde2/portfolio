@@ -1,0 +1,35 @@
+---
+---
+
+<div class="h-10">
+  <p>Alok Hegde</p>
+</div>
+
+<style>
+  /* Register our custom font family and tell the browser where to find it. */
+  @font-face {
+    font-family: "Permanent Marker";
+    src: url("/fonts/PermanentMarker-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  p {
+    font-family: "Permanent Marker";
+    font-size: 2rem;
+    text-align: center;
+    animation-name: paragraph;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+  }
+
+  @keyframes paragraph {
+    0% {
+      font-size: 1rem;
+    }
+
+    100% {
+      font-size: 2rem;
+    }
+  }
+</style>

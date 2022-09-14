@@ -1,5 +1,6 @@
 ---
 import Body from "../components/Body.astro";
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import SecondaryHeader from "../components/SecondaryHeader.astro";
 import Layout from "../layouts/Layout.astro";
@@ -12,6 +13,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="body flex justify-center items-center">
       <Body />
     </div>
+    <Footer />
   </main>
 </Layout>
 
@@ -22,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
 
   .body {
     background-color: #f7f7f7;
-    min-height: 75vh ;
+    min-height: 75vh;
     margin: 2rem;
     padding: 2rem;
   }

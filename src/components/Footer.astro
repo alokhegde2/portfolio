@@ -1,0 +1,78 @@
+---
+import arrow from "/images/arrow.png";
+import github from "/images/github.png";
+import linkedin from "/images/linkedin.png";
+import twitter from "/images/twitter.png";
+---
+
+<div
+  class="mt-5 mx-12 main-container grid sm:grid-cols-1 md:grid-cols-3 items-center justify-around"
+>
+  <div class="flex flex-row items-center pb-7">
+    <img src={arrow} alt="" srcset="" />
+    <div class="pl-3">
+      <div>
+        <p class="p1">Don't be a stranger,</p>
+      </div>
+      <div>
+        <h3>JUST SAY HELLO.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="pb-7">
+    <p class="p2">Every mind needs friendly contact with other minds…</p>
+    <h4 class="pt-3">M : +91-9739245041</h4>
+    <h4>E : alokhegde3@gmail.com</h4>
+  </div>
+
+  <div>
+    <div class="flex flex-row justify-center">
+      <img src={github} alt="" class="social" />
+      <img src={linkedin} alt="" class="social" />
+      <img src={twitter} alt="" class="social" />
+    </div>
+  </div>
+</div>
+
+<style>
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("/fonts/RobotoMono-Medium.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  .p1 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: "Roboto Mono";
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Roboto Mono";
+  }
+
+  .p2 {
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-family: "Roboto Mono";
+    color: #666666;
+    font-style: italic;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Roboto Mono";
+  }
+
+  .social {
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    margin: 1rem;
+  }
+
+</style>

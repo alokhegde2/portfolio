@@ -1,11 +1,15 @@
 ---
+export interface Props {
+	title: string;
+	description: string;
+}
+const { title,description } = Astro.props;
 ---
 
 <div>
-  <h3>Want To Get In Touch ?</h3>
+  <h3>{title}</h3>
   <p>
-    Feel free to get in touch with me. I am always open to discuss new projects,
-    creative ideas or opportunities to be part of your visions
+    {description}
   </p>
 </div>
 
@@ -21,11 +25,11 @@
     padding: 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: transform 0.5s ease-out 100ms; /*  shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. */
+    transition: transform 0.2s ease-out 100ms; /*  shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. */
   }
 
   div:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
   }
 
   h3 {

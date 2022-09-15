@@ -1,0 +1,195 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import SecondaryHeader from "../components/SecondaryHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Get in touch">
+  <main>
+    <Header />
+    <SecondaryHeader />
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 mx-12 my-16 main-container">
+      <div class="flex flex-col left-container">
+        <h5 class="first-h5">Don't be a stranger</h5>
+        <h5 class="second-h5">Just say hello.</h5>
+        <p class="pt-5">
+          Feel free to get in touch with me. I am always open to discuss new
+          projects, creative ideas or opportunities to be part of your visions.
+        </p>
+
+        <br />
+        <br />
+        <br />
+
+        <p class="contact-text">Need help?</p>
+
+        <h6>alokhegde3@gmail.com</h6>
+
+        <br />
+        <br />
+
+        <p class="contact-text">Feel like talking?</p>
+
+        <h6>+91-9739245041</h6>
+      </div>
+      <div class="right-container">
+        <form action="" class="flex flex-col">
+          <input type="text" name="Name" id="name" placeholder="Name" />
+          <input
+            type="text"
+            name="phoneNumber"
+            id="name"
+            placeholder="Phone Number"
+          />
+          <input type="email" name="email" id="name" placeholder="Email" />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Leave your message here"></textarea>
+
+          <button>Send Over</button>
+        </form>
+      </div>
+    </div>
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  @font-face {
+    font-family: "Permanent Marker";
+    src: url("/fonts/PermanentMarker-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  h4 {
+    font-family: "Permanent Marker";
+    font-size: 2.5rem;
+    text-align: left;
+    color: #f0a500;
+  }
+
+   .main-container {
+    background-color: #f7f7f7;
+    min-height: 75vh;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  .left-container {
+    animation-name: leftContAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: linear;
+  }
+
+  @keyframes leftContAnim {
+    0% {
+      transform: translatex(-100px);
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translatex(0px);
+      opacity: 1;
+    }
+  }
+
+  h5 {
+    font-family: "Roboto Mono";
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .first-h5 {
+    color: #f0a500;
+  }
+
+  p {
+    font-family: "Roboto Mono";
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-family: "Roboto Mono";
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .contact-text {
+    color: #5c5c5c;
+  }
+
+  .right-container{
+    animation-name: rightContAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: linear;
+  }
+
+  @keyframes rightContAnim {
+    0% {
+      transform: translatex(100px);
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translatex(0px);
+      opacity: 1;
+    }
+  }
+
+  input {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 1px solid #5c5c5c;
+    box-sizing: border-box;
+    font-family: "Roboto Mono";
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+
+  textarea {
+    width: 80%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 1px solid #5c5c5c;
+    box-sizing: border-box;
+    font-family: "Roboto Mono";
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+
+  input:focus {
+    outline: none;
+    border: 1px solid #f0a500 !important;
+  }
+
+  textarea:focus {
+    outline: none;
+    border: 1px solid #f0a500 !important;
+  }
+
+  button {
+    background-color: black;
+    color: #ffff;
+    border: 2px solid black;
+    padding: 0.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border-radius: 2rem;
+    font-family: "Roboto Mono";
+    font-size: 0.8rem;
+    width: 8rem;
+    margin-top: 1rem;
+  }
+</style>

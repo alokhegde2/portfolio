@@ -1,0 +1,36 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import SecondaryHeader from "../components/SecondaryHeader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Projects">
+  <main>
+    <Header />
+    <SecondaryHeader />
+    <div
+      class="grid sm:grid-cols-1 md:grid-cols-4 gap-10 justify-center cards-container"
+    >
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+    </div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .cards-container {
+    background-color: #f7f7f7;
+    min-height: 75vh;
+    margin: 2rem;
+    padding: 2rem;
+  }
+</style>

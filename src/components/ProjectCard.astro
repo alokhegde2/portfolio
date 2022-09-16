@@ -1,13 +1,44 @@
 ---
+export interface Props {
+  title: string;
+  description: string;
+  projectImageUrl: string;
+  technologies: string[];
+  isWorkInProgress:boolean;
+}
+const { title, description, technologies, projectImageUrl,isWorkInProgress } = Astro.props;
 ---
 
 <main>
-  <div class="card-container"></div>
+  <div class="card-container">
+    <div class="image">
+      <img src={projectImageUrl} alt="Project Image" />
+    </div>
+
+    <h5 class="mx-4 my-2">{title}</h5>
+
+    <p class="mx-4">
+      {description}
+    </p>
+
+    <div class="tech-clips mx-4 my-3 flex flex-row flex-wrap">
+      {
+        technologies.map((technology) => (
+          <p class="tech-clip mx-1 px-2 py-1 my-1">{technology}</p>
+        ))
+      }
+    </div>
+
+    {(isWorkInProgress)?   
+     <div class="mx-4 my-3">
+        <p class="see-details-p">Work in progress</p>
+    </div>:
+    <></>}
+  </div>
 </main>
 
 <style>
   .card-container {
-    height: 20rem;
     width: 15rem;
     border: 2px solid #5c5c5c;
     border-radius: 0.5rem;
@@ -17,5 +48,45 @@
   .card-container:hover {
     border: 2px solid #f0a500;
     transform: scale(1.06);
+  }
+
+  .image {
+    height: 10rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .image img {
+    width: 100%;
+    transition: transform 1.5s ease-out 100ms;
+  }
+
+  .card-container:hover > .image img{
+    transform: scale(1.06);
+  }
+
+  h5 {
+    font-family: "Roboto Mono";
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-family: "Roboto Mono";
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .tech-clip {
+    background-color: #f0a500;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+  }
+
+  .see-details-p {
+    text-align: right;
+    text-decoration: underline;
   }
 </style>

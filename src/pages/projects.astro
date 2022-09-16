@@ -4,6 +4,103 @@ import Header from "../components/Header.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SecondaryHeader from "../components/SecondaryHeader.astro";
 import Layout from "../layouts/Layout.astro";
+
+var projects: {
+  title: string;
+  imageUrl: string;
+  description: string;
+  technologies: string[];
+  isWorkInProgress:boolean
+}[] = [
+  {
+    title: "MK Curtains",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    isWorkInProgress:false,
+  },
+  {
+    title: "NBF",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    isWorkInProgress:false,
+  },
+  {
+    title: "Future Way",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Node Js",
+      "ExpressJs",
+      "MongoDB",
+      "React",
+    ],
+    isWorkInProgress:false,
+  },
+  {
+    title: "Auto Silent",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    isWorkInProgress:false,
+  },
+  {
+    title: "Call For Prayer",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    isWorkInProgress:false,
+  },
+  {
+    title: "ETG Admin",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    isWorkInProgress:false,
+  },
+  {
+    title: "NES-ETS Admin",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "Firebase"],
+    isWorkInProgress:false,
+  },
+  {
+    title: "Instant Gamez",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "MongoDB","ExpressJs","NodeJs"],
+    isWorkInProgress:true,
+  },
+  {
+    title: "Grocer Guru",
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+    description:
+      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+    technologies: ["Flutter", "Dart", "MongoDB","ExpressJs","NodeJs"],
+    isWorkInProgress:true,
+  },
+];
 ---
 
 <Layout title="Projects">
@@ -13,14 +110,17 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="grid sm:grid-cols-1 md:grid-cols-4 gap-10 justify-center cards-container"
     >
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      {
+        projects.map((project) => (
+          <ProjectCard
+            description={project["description"]}
+            projectImageUrl={project["imageUrl"]}
+            title={project["title"]}
+            technologies={project["technologies"]}
+            isWorkInProgress={project["isWorkInProgress"]}
+          />
+        ))
+      }
     </div>
     <Footer />
   </main>

@@ -15,18 +15,18 @@ var projects: {
   {
     title: "MK Curtains",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/mk.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "MK Curatin is the company which is selling the curatins and they have 3-4 branch in costal karnataka, and I made 2 apps for them for moving their paper work to complete digital mode ",
     technologies: ["Flutter", "Dart", "Firebase"],
     isWorkInProgress:false,
   },
   {
     title: "NBF",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/nbf.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "NBF(Natural Born Foll) is the social media application which is nearly similar to tik-tok and this platform for the comedians they can create the video and reach their audience through this platform. This app is available in both playstore and apple store",
     technologies: ["Flutter", "Dart", "Firebase"],
     isWorkInProgress:false,
   },
@@ -35,7 +35,7 @@ var projects: {
     imageUrl:
       "/images/future_way.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "Future Way is the online learning platfrom with yearly subscription basis. For them I developed one Mobile App and One website for admin panel.",
     technologies: [
       "Flutter",
       "Dart",
@@ -49,9 +49,9 @@ var projects: {
   {
     title: "Auto Silent",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/autosilent.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "Auto Silent is the mobile app to silent your mobile on scheduled time. Here user can schedule the time when they want their mobile to enter DND mode and when to off the mode, app will do that dynamically",
     technologies: ["Flutter", "Dart", "Firebase"],
     isWorkInProgress:false,
   },
@@ -60,43 +60,43 @@ var projects: {
     imageUrl:
       "/images/call_for_prayer.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "Call For Prayer is the app where mosques can record the prayer and schedule the prayer and prayer will play automatically in background at that time without any human intervention.",
     technologies: ["Flutter", "Dart", "Firebase"],
     isWorkInProgress:false,
   },
   {
     title: "ETG Admin",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/etg.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "ETG is the one of the big organization in Africa. For them I developed the admin panel to manage their mobile app.",
     technologies: ["Flutter", "Dart", "Firebase"],
     isWorkInProgress:false,
   },
   {
     title: "NES-ETS Admin",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/nes.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "NES-ETS is the school of the Gujarat. And they have app for their school teachers and students. For them I added new features and developed admin panel for cetralized control.",
     technologies: ["Flutter", "Dart", "Firebase"],
     isWorkInProgress:false,
   },
   {
     title: "Instant Gamez",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/instant_gamez.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "Instant Gamez is the gaming platform.It's in development stage",
     technologies: ["Flutter", "Dart", "MongoDB","ExpressJs","NodeJs"],
     isWorkInProgress:true,
   },
   {
     title: "Grocer Guru",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg",
+      "/images/grocer_guru.png",
     description:
-      "Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size",
+      "Grocer guru is the app where user can user can order grocery from the shops near to them. This is in development stage.",
     technologies: ["Flutter", "Dart", "MongoDB","ExpressJs","NodeJs"],
     isWorkInProgress:true,
   },
@@ -108,7 +108,7 @@ var projects: {
     <Header />
     <SecondaryHeader />
     <div
-      class="grid sm:grid-cols-1 md:grid-cols-4 gap-10 justify-center cards-container"
+      class="container grid sm:grid-cols-1 md:grid-cols-4 gap-10 cards-container"
     >
       {
         projects.map((project) => (
@@ -129,7 +129,6 @@ var projects: {
 <style>
   .cards-container {
     background-color: #f7f7f7;
-    min-height: 75vh;
     margin: 2rem;
     padding: 2rem;
   }
